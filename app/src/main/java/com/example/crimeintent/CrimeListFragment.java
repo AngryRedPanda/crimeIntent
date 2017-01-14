@@ -74,7 +74,7 @@ public class CrimeListFragment extends Fragment {
         public void bindCrime(Crime crime) {
             mCrime = crime;
             mTitleTextView.setText(mCrime.getCrimeTitle());
-            mDateTextView.setText(mCrime.getCrimeDate().toString());
+            mDateTextView.setText(mCrime.getFormattedDate().toString());
             mSolvedCheckBox.setChecked(mCrime.isSolved());
         }
 

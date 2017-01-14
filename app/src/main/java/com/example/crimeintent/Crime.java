@@ -1,6 +1,7 @@
 package com.example.crimeintent;
 
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Random;
 import java.util.UUID;
@@ -33,11 +34,20 @@ public class Crime {
         return crimeDate;
     }
 
+    public String getFormattedDate() {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("MMM dd, yyyy hh:mm a");
+        return dateFormat.format(this.getCrimeDate());
+    }
+
     public void setCrimeTitle(String crimeTitle) {
         this.crimeTitle = crimeTitle;
     }
 
     public void setSolved(boolean solved) {
         isSolved = solved;
+    }
+
+    public void setCrimeDate(Date crimeDate) {
+        this.crimeDate = crimeDate;
     }
 }
